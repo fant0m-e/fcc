@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 #header {}
 
-#nav-bar {}
+#navbar {
+    position: fixed;
+    min-width: 275px;
+    top: 0px;
+    left: 0px;
+    width: 310px;
+    height: 100%;
+    font-size: 26px;
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align: justify;
+}
 
-#main-doc {}
+#main-doc {
+    position: absolute;
+    margin-left: 315px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
 
 #cpu {}
 
@@ -17,3 +35,45 @@
 #cooling_system {}
 
 .main-section {}
+
+.nav-link {
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 815px) {
+    #navbar {
+        position: absolute;
+        background-color: white;
+        top: 0;
+        width: 100%;
+        max-height: 300px;
+        border-bottom: 1px solid;
+    }
+}
+
+@media only screen and (max-width: 815px) {
+    #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 275px;
+    }
+}
+
+html, body {
+    min-width: 275px;
+    color: black;
+    background-color: #FDF4DC;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.5;
+}
+
+section {
+    display: block;
+}
+
+header {
+    font-size: 34px;
+}

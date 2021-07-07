@@ -1,10 +1,18 @@
 <html lang="en">
 
 <body translate="no">
-    <nav id="nav-bar">
+    <nav id="navbar">
         <header>
             PC Parts List
         </header>
+        <div>
+            <a class="nav-link" href="#cpu">CPU</a>
+            <a class="nav-link" href="#gpu">GPU</a>
+            <a class="nav-link" href="#motherboard">Motherboard</a>
+            <a class="nav-link" href="#memory">Memory</a>
+            <a class="nav-link" href="#hard_drive">Hard Drive</a>
+            <a class="nav-link" href="#cooling_system">Cooling System</a>
+        </div>
     </nav>
     <main id="main-doc">
         <section class="main-section" id="cpu">
@@ -12,7 +20,15 @@
                 CPU
             </header>
             <p>
-                CPU Info 1
+                The CPU, or Central Processing Unit, is essentially the brain of the computer. 
+                The CPU's job is to execute instructions in the form of code. The CPU consists of an ALU, 
+                or arithmic and logic unit, a control unit, and a varying number of registers. Modern
+                CPU's use multiple cores designed to seperate tasks and thus run more efficiently. Thus, 
+                more cores = more processing power. Generally Hexa Cores and higher are only used in 
+                servers or quantum computers.
+            </p>
+            <p>
+                To see your PC's CPU, go into Command Prompt and type <code> wmic cpu get caption</code>.
             </p>
             <ol>
                 <li>
@@ -33,30 +49,51 @@
                 <li>
                     Deca Core
                 </li>
-            </ol>>
+            </ol>
         </section>
-        <section class="main-section" id="GPU">
+        <section class="main-section" id="gpu">
             <header>
                 GPU
             </header>
             <p>
-                GPU Info 1
+                The GPU, or Graphics Processing Unit, is what handles graphics. 
+                Designed to rapidly manipulate memory to accelerate the pixelation of images to match target
+                framerates, these are an important aspect of any computer built for gaming or utilizing
+                HD multimedia.
+            </p>
+            <p>
+                To check your PC's GPU open Command Prompt and type in <code> wmic path win32_VideoController get name</code>.
             </p>
             <ol>
                 <li>
                     Integrated
+                    <p>
+                        These graphics are built in to the motherboard, and are generally less 
+                        equipped for intensive computing (gaming.)
+                    </p>
                 </li>
                 <li>
                     Discrete
+                    <p>
+                        These are seperate GPU's, attached externally to the motherboard, and are 
+                        generally capable for higher graphics quality at higher framerates.
+                    </p>
                 </li>
-            </ol>>
+            </ol>
         </section>
         <section class="main-section" id="motherboard">
             <header>
                 Motherboard
             </header>
             <p>
-                Mobo Info 1
+                The Motherboard is the backbone of the PC, it is the framework that binds together most of the
+                other elements of a computer. When you think of the inside of a computer, you probably think
+                of a lot of chips and wires - this is the motherboard, connecting everything together. The 
+                primary difference between types of motherboards is varying ports, both external and internal, 
+                among other small variations.
+            </p>
+            <p>
+                To see your motherboard specs, open Command Prompt and type in <code> wmic baseboard get product,Manufacturer</code>.
             </p>
             <ol>
                 <li>
@@ -84,10 +121,15 @@
                 Memory
             </header>
             <p>
-                RAM Info 1
+                Your RAM, or random access memory, is your PC's short-term memory. It remembers and files 
+                everything currently running on your computer. All data currently being accessed is 
+                stored and organized in the RAM, so that your computer can run various operations or 
+                files at the same time. The two primary variations in RAM types are DRAM, Dynamic RAM, and 
+                SRAM, Static RAM. DRAM, given to small drains in information stored, has to be refreshed 
+                every few milliseconds, thus making it slightly slower than SRAM.
             </p>
             <p>
-                RAM Info 2
+                To check your PC's RAM, open Command Prompt and type in <code> wmic MEMORYCHIP get BankLabel, DeviceLocator, Capacity, Speed</code>.
             </p>
             <ol>
                 <li>
@@ -118,49 +160,80 @@
                 Hard Drive
             </header>
             <p>
-                HDD Info 1
+                The Hard Drive is long-term memory. This is the physical space in which all your files are stored, 
+                from pictures to music to games to movies, it all gets stored on the Hard Drive, which can be 
+                accessed by your computer, or more specifically your OS, or Operations System, as needed.
             </p>
             <p>
-                HDD Info 2
+                To see details on your Hard Drive, open Command Prompt and type <code> wmic diskdrive</code> for general specs, or <code> wmic diskdrive get size</code> for size specifically.
+            </p>
                 <ol>
                     <li>
                         PATA
+                        <p>
+                            Parallel ATA, a traditional and mechanical Hard Drive, rarely used in modern PC's.
+                        </p>
                     </li>
                     <li>
                         SATA
-                    </li>
-                    <li>
-                        SCSI
+                        <p>
+                            Serial ATA, much like a PATA, except for differences in encoding and transportation, 
+                            these are also mechanical Hard Drive's, and the default for most modern PC's.
+                        </p>
                     </li>
                     <li>
                         SSD
+                        <p>
+                            Unlike the mechanical Hard Drives mentioned above, a Solid State Drive stores 
+                            data on interconnected flash drives, as opposed to the various platters used on 
+                            older HDD's, therefore making it able to transfer data significantly faster. 
+                        </p>
                     </li>
                 </ol>
-            </p>
         </section>
         <section class="main-section" id="cooling_system">
             <header>
                 Cooling System
             </header>
             <p>
-                Cooling Info 1
+                Your PC, or more specifically certain parts of your PC, get very hot while running.
+                Specifically, your CPU and GPU (especially during intensive computing such as gaming) 
+                generate a lot of heat, but the entire inner workings of a computer get hot, and this
+                affects performance and could potentially damange the delicate parts inside. The solution?
+                Cooling, of course. While CPU's and GPU's typically have their own cooling facilities, 
+                fans will generally be used to cycle fresh air in and through the PC to help keep the 
+                inside as cool as possible.
             </p>
             <p>
-                Cooling Info 2
+                To find out more about your PC's cooling system, you'll have to either access a detailed specs sheet for your computer or open up the tower yourself and examine.
             </p>
             <ol>
                 <li>
                     Heat Sinks
+                    <p>
+                        Typically used on CPU's, although most modern gaming rigs have liquid cooling for the CPU as well.
+                    </p>
                 </li>
                 <li>
                     Fans
+                    <p>
+                        Most PC's have some sort of fan system to cycle air through the inner workings and 
+                        over the parts, thus taking with them some of the heat generated through computing. 
+                        More advanced PC's, such as those used for gaming, will contain 6 or more fans, whereras 
+                        standard PC's will often only have one or two.
+                    </p>
                 </li>
                 <li>
                     Liquid Cooling
+                    <p>
+                        Primarily used for gaming PC's (and some servers and quantum computers) these systems 
+                        have hoses that flow through the PC and over heat-generating parts specifically, and 
+                        run fluid through the hose/tube system while cycling through a cooler. This is much 
+                        how any liquid cooled engine or radiator would run.
+                    </p>
                 </li>
             </ol>
         </section>
     </main>
 </body>
-
 </html>
